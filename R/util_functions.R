@@ -441,7 +441,7 @@ cleanAndSubsetObtainedData<- function(wxdata,
   #the following are harmless if not present
   wxdata <- gsub("<br>", "", wxdata) #get rid of BR tags
   wxdata <- wxdata[wxdata!=""] #remove blank lines (if any)
-  #wxdata <- sub(",+$", "", wxdata) #remove ENDING commas (if any)
+  wxdata <- sub(",+$", "", wxdata) #remove ENDING commas (if any)
 
   if(opt_verbose){print(length(wxdata))}
 
@@ -534,7 +534,7 @@ cleanAndSubsetDetailedData<- function(wxdata,
 
   wxdata <- gsub("<br>", "", wxdata) #get rid of BR tags
   wxdata <- wxdata[wxdata!=""] #remove blank lines (if any)
-#  wxdata <- sub(",+$", "", wxdata) #remove ENDING commas (if any)
+  wxdata <- sub(",+$", "", wxdata) #remove ENDING commas (if any)
 
   if(opt_verbose){print(length(wxdata))}
   
